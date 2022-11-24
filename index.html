@@ -49,12 +49,11 @@
           <li> <a href=""><i class="fas fa-user"></i></i></a></li>
           <li> <a href=""><i class="fas fa-shopping-bag"></i></a></li>
         </div>
-    
-      </header>
+</header>
     
       <section id="slider">
         <div class="slider-container aspect-ratio-169">
-          <img src="./Images/6.png" alt="">
+          <img src="./Images/1.jpg" alt="">
           <img src="./Images/2.jpg" alt="">
           <img src="./Images/3.jpg" alt="">
           <img src="./Images/4.jpg" alt="">
@@ -103,10 +102,9 @@
         ©FLORA COMESTIC All rights reserved
       </p>
     </div>
-    
-    </body>
-    
-    <script>
+     
+</body>
+<script>
       const header = document.querySelector("header");
     window.addEventListener("scroll",function(){
       x = window.pageYOffset;
@@ -143,7 +141,9 @@
     
       function slider(index ) {
         imagContainer.style.left = "-"+ index*100 + "%";
-    
+        const dotActive = document.querySelector('.active')
+        dotActive.classList.remove("active")
+        dotItem[index].classList.add("active")
       }
       setInterval(imgSlide, 5000);
 </script>
