@@ -1,0 +1,163 @@
+    <!-- Product -->
+    <div class="container">
+        <div class="product-path row">
+            <p>HOME</p>
+            <p>&#10230;</p>
+            <p>{{product.Product_Groups}}</p>
+            <p>&#10230;</p>
+            <p>{{product.Product_Line}}</p>
+        </div>
+        <div class="product-content row">
+            <div class="product-left row">
+                <div class="big-img">
+                    <img src="{{product.image}}" alt="">
+                </div>
+                <div class="small-imgs">
+                    <i class="fas fa-chevron-up hidden"></i>
+                    <img src="{{product.image}}" alt="">
+                    <img src="{{product.image}}" alt="">
+                    <img src="{{product.image}}" alt="">
+                    <img src="{{product.image}}" alt="">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="product-right">
+                <div class="product-name">
+                    <h1>{{product.name}}</h1>
+                    <p>MSP: {{product.MSP}}</p>
+                </div>
+                <div class="product-price row">
+                    <p>{{product.cost}} <sup>đ</sup> </p>
+                    <p>{{product.cost}} <sup>đ</sup> </p>
+                </div>
+                <div class="product-color">
+                    <p><span style="font-weight:bold;">Coler: </span>##########<span style="color:red;">*</span></p>
+                </div>
+                <div class="product-quantity">
+                    <p style="font-weight: bold;">AMOUNT:</p>
+                    <input type="number" min="0" value="1">
+                    <br>
+                </div>  
+                <div class="product-buy">
+                    <button>
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>BUYING</p>
+                    </button>
+                    <button>
+                        <p>SEARCH IN STORE</p>
+                    </button>
+                </div>
+                <div class="contact">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>Hotline</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="far fa-comments"></i>
+                        <p>Chat</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="far fa-envelope"></i>
+                        <p>Mail</p>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-info-show">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="product-info-content">
+                        <div class="product-info-title row">
+                            <div class="product-info-title-item title-detail active">
+                                <p>Detail</p>
+                            </div>
+                            <div class="product-info-title-item title-preserved">
+                                <p>Preserve</p>
+                            </div>
+                            <div class="product-info-title-item title-size">
+                                <p>Refer to the size</p>
+                            </div>
+                        </div>
+                        <div class="product-info-body ">
+                            <div class="product-info-item info-detail active">
+                                <p>{{product.description}}</p>
+
+                                <div class="product-info-table">
+                                    <p>Product Line <span>You</span> </p>
+                                    <p>Product Groups <span>MAKE UP</span> </p>
+                                    <p>##### <span>#####</span> </p>
+                                    <p>##### <span>#####</span> </p>
+                                    <p>##### <span>#####</span> </p>
+                                    <p>##### <span>#####</span> </p>
+                                    <p>##### <span>#####</span> </p>
+                                    <p>##### <span>#####</span> </p>
+                                </div>
+                            </div>
+                            <div class="product-info-item info-preserved">
+                                <p>Product storage details: </p>
+                                <p>##############################################################</p>
+                                <p>##############################################################</p>
+                                <p>##############################################################</p>
+                                <p>##############################################################</p>
+                                <p>##############################################################</p>
+                                <p>##############################################################</p>
+                                <p>##############################################################</p>
+                                <p>##############################################################</p>
+                                <p>##############################################################</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related -->
+    <div class="container product-related">
+        <div class="related-title row">
+            <p>Different color</p>
+            <p>Buy with</p>
+        </div>
+        <div class="related-content row">
+            <i class="fas fa-chevron-left hidden"></i>
+            <div class="related-item">
+                <img src="./img/related1.jpg" alt="">
+                <h1>##############################</h1>
+                <p>276.000 <sup>đ</sup></p>
+                <p>690.000 <sup>đ</sup></p>
+            </div>
+            <div class="related-item">
+                <img src="./img/related2.jpg" alt="">
+                <h1>##############################</h1>
+                <p>276.000 <sup>đ</sup></p>
+                <p>690.000 <sup>đ</sup></p>
+            </div>
+            <div class="related-item">
+                <img src="./img/related3.jpg" alt="">
+                <h1>##############################</h1>
+                <p>276.000 <sup>đ</sup></p>
+                <p>690.000 <sup>đ</sup></p>
+            </div>
+            <div class="related-item">
+                <img src="./img/related4.jpg" alt="">
+                <h1>##############################</h1>
+                <p>276.000 <sup>đ</sup></p>
+                <p>690.000 <sup>đ</sup></p>
+            </div>
+            <div class="related-item">
+                <img src="./img/related5.jpg" alt="">
+                <h1>##############################</h1>
+                <p>276.000 <sup>đ</sup></p>
+                <p>690.000 <sup>đ</sup></p>
+
+            </div>
+            <i class="fas fa-chevron-right"></i>
+
+
+        </div>
+    </div>
+
+
+
+
+    <!-- End Product -->
