@@ -379,7 +379,7 @@ footer {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 .category-content-item {
@@ -387,6 +387,7 @@ footer {
     text-align: center;
     padding: 16px 0;
     font-size: 12px;
+    float: left;
 }
 
 .category-content-item h4 {
@@ -397,12 +398,9 @@ footer {
 .category-content-item p {
     display: inline-block;
     margin-right: 10px;
-    text-decoration: line-through;
 }
 
-.category-content-item :last-child {
-    text-decoration: none;
-}
+
 
 .category-content-item img {
     width: 100%;

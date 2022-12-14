@@ -95,56 +95,21 @@
                        </select>
                         </div>
                     </div>
+                    
                     <div class="category-content">
+                        {{#each products}}
                         <div class="category-content-item">
-                            <img src="./img/pro1.jpg" alt="">
-                            <h4>################################</h4>
-                            <p>990.000 <sup>đ</sup> </p>
-                            <p>396.000 <sup>đ</sup> </p>
+                            <a href="/product/{{this.name}}">
+                                <img src="{{this.image}}" alt="">                            
+                            </a>
+                            <a href="/product/{{this.name}}"></a>
+                                <h4>{{this.name}}</h4>
+                            </a>
+                            <p>{{this.cost}} <sup>đ</sup> </p>
                         </div>
-                        <div class="category-content-item">
-                            <img src="./img/pro2.jpg" alt="">
-                            <h4>################################</h4>
-                            <p>990.000 <sup>đ</sup> </p>
-                            <p>396.000 <sup>đ</sup> </p>
-                        </div>
-                        <div class="category-content-item">
-                            <img src="./img/pro3.jpg" alt="">
-                            <h4>################################</h4>
-                            <p>990.000 <sup>đ</sup> </p>
-                            <p>396.000 <sup>đ</sup> </p>
-                        </div>
-                        <div class="category-content-item">
-                            <img src="./img/pro4.jpg" alt="">
-                            <h4>################################</h4>
-                            <p>990.000 <sup>đ</sup> </p>
-                            <p>396.000 <sup>đ</sup> </p>
-                        </div>
-                        <div class="category-content-item">
-                            <img src="./img/pro1.jpg" alt="">
-                            <h4>################################</h4>
-                            <p>990.000 <sup>đ</sup> </p>
-                            <p>396.000 <sup>đ</sup> </p>
-                        </div>
-                        <div class="category-content-item">
-                            <img src="./img/pro2.jpg" alt="">
-                            <h4>################################</h4>
-                            <p>990.000 <sup>đ</sup> </p>
-                            <p>396.000 <sup>đ</sup> </p>
-                        </div>
-                        <div class="category-content-item">
-                            <img src="./img/pro3.jpg" alt="">
-                            <h4>################################</h4>
-                            <p>990.000 <sup>đ</sup> </p>
-                            <p>396.000 <sup>đ</sup> </p>
-                        </div>
-                        <div class="category-content-item">
-                            <img src="./img/pro4.jpg" alt="">
-                            <h4>################################</h4>
-                            <p>990.000 <sup>đ</sup> </p>
-                            <p>396.000 <sup>đ</sup> </p>
-                        </div>
+                        {{/each}}
                     </div>
+                    
 
                     <div class="category-pagination row">
                         <div class="pagination">

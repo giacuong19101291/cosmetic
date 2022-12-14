@@ -1,3 +1,5 @@
+const Product = require('../models/Product')
+const { mutipleMongooseToObject } = require('../../util/mongoose')
 
 class SiteController {
 
@@ -12,9 +14,16 @@ class SiteController {
     }
 
     // [GET] / cartegory
-    cartegory(req, res){
-        res.render('cartegory')
+    cartegory(req, res, next){
+        Product.find({})
+            .then(products => {
+                res.render('cartegory', {
+                products: mutipleMongooseToObject(products)
+            })
+            })
+            .catch(next);
     }
+
 
     // [GET] / delivery
     delivery(req, res){

@@ -3,55 +3,41 @@
         <div class="product-path row">
             <p>HOME</p>
             <p>&#10230;</p>
-            <p>{{this.Product_Groups}}</p>
+            <p>{{product.Product_Groups}}</p>
             <p>&#10230;</p>
-            <p>{{this.Product_Line}}</p>
+            <p>{{product.Product_Line}}</p>
         </div>
         <div class="product-content row">
             <div class="product-left row">
                 <div class="big-img">
-                    <img src="{{this.image}}" alt="">
+                    <img src="{{product.image}}" alt="">
                 </div>
                 <div class="small-imgs">
                     <i class="fas fa-chevron-up hidden"></i>
-                    <img src="{{this.image}}" alt="">
-                    <img src="{{this.image}}" alt="">
-                    <img src="{{this.image}}" alt="">
-                    <img src="{{this.image}}" alt="">
+                    <img src="{{product.image}}" alt="">
+                    <img src="{{product.image}}" alt="">
+                    <img src="{{product.image}}" alt="">
+                    <img src="{{product.image}}" alt="">
                     <i class="fas fa-chevron-down"></i>
                 </div>
             </div>
             <div class="product-right">
                 <div class="product-name">
-                    <h1>{{this.name}}</h1>
-                    <p>MSP: {{this.MSP}}</p>
+                    <h1>{{product.name}}</h1>
+                    <p>MSP: {{product.MSP}}</p>
                 </div>
                 <div class="product-price row">
-                    <p>{{this.cost}} <sup>đ</sup> </p>
-                    <p>{{this.cost}} <sup>đ</sup> </p>
+                    <p>{{product.cost}} <sup>đ</sup> </p>
+                    <p>{{product.cost}} <sup>đ</sup> </p>
                 </div>
                 <div class="product-color">
                     <p><span style="font-weight:bold;">Coler: </span>##########<span style="color:red;">*</span></p>
-                    <div class="product-color-img">
-                        <img src="./img/xanh-oliu.jpg" alt="">
-                    </div>
-                </div>
-                <div class="product-size">
-                    <p style="font-weight:bold;">Size: L</p>
-                    <div class="size">
-                        <span>S</span>
-                        <span>M</span>
-                        <span>L</span>
-                        <span>XL</span>
-                        <span>XXL</span>
-                    </div>
                 </div>
                 <div class="product-quantity">
                     <p style="font-weight: bold;">AMOUNT:</p>
                     <input type="number" min="0" value="1">
                     <br>
-                </div>
-                <p style="color: red;">Please choose size</p>
+                </div>  
                 <div class="product-buy">
                     <button>
                         <i class="fas fa-shopping-basket"></i>
@@ -75,9 +61,6 @@
                         <p>Mail</p>
                     </div>
                 </div>
-                <div class="product-qr">
-                    <img src="./img/qr-pro.png" alt="">
-                </div>
                 <div class="product-info">
                     <div class="product-info-show">
                         <i class="fas fa-chevron-down"></i>
@@ -96,13 +79,8 @@
                         </div>
                         <div class="product-info-body ">
                             <div class="product-info-item info-detail active">
-                                <p>################################################################################################</p>
-                                <p>################################################################################################################</p>
-                                <p>############################################################## </p>
-                                <p>############ </p>
-                                <p>###############<span>########</span> </p>
-                                <p>####### <span>########</span> </p>
-                                <p>############# <span>########</span> </p>
+                                <p>{{product.description}}</p>
+
                                 <div class="product-info-table">
                                     <p>Product Line <span>You</span> </p>
                                     <p>Product Groups <span>MAKE UP</span> </p>
