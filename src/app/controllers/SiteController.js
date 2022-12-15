@@ -8,6 +8,16 @@ class SiteController {
         res.render('home')
     }
     
+    // [GET] / login
+    login(req, res){
+        res.render('login')
+    }
+
+    // [GET] / signup
+    signup(req, res){
+        res.render('signup')
+    }
+
     // [GET] / cart
     cart(req, res){
         res.render('cart')

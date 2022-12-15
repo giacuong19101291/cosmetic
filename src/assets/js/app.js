@@ -13,7 +13,7 @@ window.addEventListener("scroll", function() {
 })
 
 // Slider ------------------------------------------------
-if (document.querySelector(".aspect-ratio")) {
+if (document.querySelector(".aspec t-ratio")) {
     const imgPositon = document.querySelectorAll(".aspect-ratio img")
     const imgContainer = document.querySelector(".aspect-ratio")
     const dots = document.querySelectorAll(".dot")

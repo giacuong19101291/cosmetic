@@ -23,7 +23,7 @@ class ProductsController {
     store(req, res, next) { 
         const product = new Product(req.body)
         product.save()
-            .then(() => res.redirect('/'))
+            .then(() => res.redirect('/cartegory'))
             .catch(error => {
                 
             })
