@@ -13,9 +13,9 @@ btnSignup.addEventListener("click", (e) => {
   };
   let json = JSON.stringify(user);
   if (!username.value || !email.value || !password.value) {
-    alert("vui long nhap day du thong tin");
+    alert("Please enter full information");
   } else {
     localStorage.setItem(username.value, json);
-    alert("dang ky thanh cong");
+    alert("Sign Up Success");
   }
 });

@@ -13,12 +13,12 @@ btnLogin.addEventListener("click", (e) => {
   console.log(user);
   let json = JSON.stringify(user);
   if (!username.value || !email.value || !password.value) {
-    alert("vui long nhap day du thong tin");
+    alert("Please enter full information");
   }
   if (localStorage.getItem(username.value) == json) {
-    alert("dang nhap thanh cong");
+    alert("Logged in successfully");
     window.location.href = "/";
   } else {
-    alert("dang nhap that bai");
+    alert("Login failed");
   }
 });
