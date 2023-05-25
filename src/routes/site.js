@@ -14,5 +14,4 @@ router.post('/letlogin', siteController.letlogin)
 router.post('/addcart', siteController.addcart)
 router.get('/', siteController.home)
 
-
 module.exports = router;
