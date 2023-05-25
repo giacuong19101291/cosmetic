@@ -39,13 +39,17 @@
                     <br>
                 </div>  
                 <div class="product-buy">
+                    <a href="/cart">
                     <button>
                         <i class="fas fa-shopping-basket"></i>
                         <p>BUYING</p>
                     </button>
-                    <button>
+                    {{!-- </a> --}}
+                    <a href="/cartegory">
+                        <button>
                         <p>SEARCH IN STORE</p>
                     </button>
+                    </a>
                 </div>
                 <div class="contact">
                     <div class="contact-item">
@@ -82,14 +86,8 @@
                                 <p>{{product.description}}</p>
 
                                 <div class="product-info-table">
-                                    <p>Product Line <span>You</span> </p>
-                                    <p>Product Groups <span>MAKE UP</span> </p>
-                                    <p>##### <span>#####</span> </p>
-                                    <p>##### <span>#####</span> </p>
-                                    <p>##### <span>#####</span> </p>
-                                    <p>##### <span>#####</span> </p>
-                                    <p>##### <span>#####</span> </p>
-                                    <p>##### <span>#####</span> </p>
+                                    <p>Product Line <span>{{product.Product_Line}}</span> </p>
+                                    <p>Product Groups <span>{{product.Product_Groups}}</span> </p>
                                 </div>
                             </div>
                             <div class="product-info-item info-preserved">
@@ -113,7 +111,7 @@
     </div>
 
     <!-- Related -->
-    <div class="container product-related">
+    {{!-- <div class="container product-related">
         <div class="related-title row">
             <p>Different color</p>
             <p>Buy with</p>
@@ -155,9 +153,38 @@
 
 
         </div>
-    </div>
+    </div> --}}
 
 
 
 
     <!-- End Product -->
+    <script>
+        // Lắng nghe sự kiện click trên nút "BUYING"
+document.querySelector('.product-buy button').addEventListener('click', function() {
+  // Lấy giá trị số lượng AMOUNT và tên sản phẩm product.name
+  var amount = document.querySelector('.product-quantity input').value;
+  var productName = document.querySelector('.product-name h1').textContent;
+
+  // Tạo đối tượng XMLHttpRequest
+  var xhr = new XMLHttpRequest();
+
+  // Thiết lập yêu cầu POST đến /buy
+  xhr.open('POST', '/addcart', true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+  // Xử lý sự kiện khi yêu cầu hoàn thành
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      // Xử lý phản hồi từ máy chủ nếu cần
+      console.log(xhr.responseText);
+    }
+  };
+
+  // Chuẩn bị dữ liệu để gửi đi
+  var data = 'productName=' + encodeURIComponent(productName) + '&amount=' + encodeURIComponent(amount);
+
+  // Gửi yêu cầu POST với dữ liệu đã chuẩn bị
+  xhr.send(data);
+});
+    </script>

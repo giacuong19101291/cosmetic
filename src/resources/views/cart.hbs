@@ -26,57 +26,23 @@
                     <tr>
                         <th>Product</th>
                         <th>Name product</th>
-                        <th>Color</th>
-                        <th>Size</th>
                         <th>SL</th>
                         <th>Money</th>
                         <th>delete</th>
                     </tr>
+                    {{#each products}}
                     <tr>
-                        <td><img src="./img/pro1.jpg" alt="" srcset=""></td>
+                        <td><img src="{{this.image}}" alt="" srcset=""></td>
                         <td>
-                            <p>Bow tie sleeve top MS 16B7763</p>
-                        </td>
-                        <td><img src="./img/xanh-oliu.jpg" alt="" srcset=""></td>
-                        <td>
-                            <p>L</p>
+                            <p>{{this.name}}</p>
                         </td>
                         <td><input type="number" value="1" min="1" name="" id=""></td>
                         <td>
-                            <p>276.000 <sup>đ</sup></p>
+                            <p>{{this.cost}} <sup>,000đ</sup></p>
                         </td>
                         <td><span>X</span></td>
                     </tr>
-                    <tr>
-                        <td><img src="./img/pro1.jpg" alt="" srcset=""></td>
-                        <td>
-                            <p>Bow tie sleeve top MS 16B7763</p>
-                        </td>
-                        <td><img src="./img/xanh-oliu.jpg" alt="" srcset=""></td>
-                        <td>
-                            <p>L</p>
-                        </td>
-                        <td><input type="number" value="1" min="1" name="" id=""></td>
-                        <td>
-                            <p>276.000 <sup>đ</sup></p>
-                        </td>
-                        <td><span>X</span></td>
-                    </tr>
-                    <tr>
-                        <td><img src="./img/pro1.jpg" alt="" srcset=""></td>
-                        <td>
-                            <p>Bow tie sleeve top MS 16B7763</p>
-                        </td>
-                        <td><img src="./img/xanh-oliu.jpg" alt="" srcset=""></td>
-                        <td>
-                            <p>L</p>
-                        </td>
-                        <td><input type="number" value="1" min="1" name="" id=""></td>
-                        <td>
-                            <p>276.000 <sup>đ</sup></p>
-                        </td>
-                        <td><span>X</span></td>
-                    </tr>
+                    {{/each}}
                 </table>
             </div>
             <div class="cart-right">
@@ -90,25 +56,25 @@
                     </tr>
                     <tr>
                         <td>TOTAL GOODS</td>
-                        <td>1.380.000 <sup>đ</sup></td>
+                        <td> <sup>,000đ</sup></td>
                     </tr>
                     <tr>
                         <td>MONEY</td>
-                        <td>552.000 <sup>đ</sup></td>
+                        <td>552.000 <sup>,000đ</sup></td>
                     </tr>
                     <tr>
                         <td>PROVISIONAL</td>
-                        <td>552.000 <sup>đ</sup></td>
+                        <td>552.000 <sup>,000đ</sup></td>
                     </tr>
 
                 </table>
                 <div class="cart-right-text">
-                    <p>Free shipping when your order is over 2,000,000 VND <sup>đ</sup></p>
-                    <p style="font-weight: 700;color: red;">Buy more <span style="font-size: 16px;">1.448.000đ</span> to get free SHIP</p>
+                    <p>Free shipping when your order is over 2,000,000 VND <sup>,000đ</sup></p>
+                    {{!-- <p style="font-weight: 700;color: red;">Buy more <span style="font-size: 16px;">1.448.000đ</span> to get free SHIP</p> --}}
                 </div>
                 <div class="cart-right-button">
-                    <button>Continue shopping</button>
-                    <button>pay</button>
+                    <a href="/cartegory"><button>Continue shopping</button></a>
+                    <a href="/delivery"><button>pay</button></a>
                 </div>
                 <div class="cart-right-login">
                     <p>FLORA ACCOUNT</p>
@@ -117,3 +83,31 @@
             </div>
         </div>
     </div>
+<script>
+    // Lấy tất cả các phần tử <input> trong bảng sản phẩm
+const quantityInputs = document.querySelectorAll('.cart-left input[type="number"]');
+
+let totalProduct = 0;
+let totalGoods = 0;
+let money = 0;
+let provisional = 0;
+
+// Duyệt qua từng phần tử <input> và tính tổng giá trị
+quantityInputs.forEach(input => {
+  const quantity = parseInt(input.value); // Số lượng sản phẩm
+  const priceElement = input.parentElement.nextElementSibling.querySelector('p'); // Phần tử chứa giá sản phẩm
+  const price = parseInt(priceElement.innerText); // Giá sản phẩm
+  
+  totalProduct += quantity; // Tổng số sản phẩm
+  totalGoods += quantity * price; // Tổng tiền hàng
+});
+
+// Gán giá trị cho các biến tổng vào bảng
+document.querySelector('.cart-right table tr:nth-child(2) td:nth-child(2)').innerText = totalProduct;
+document.querySelector('.cart-right table tr:nth-child(3) td:nth-child(2)').innerText = totalGoods.toLocaleString() + ',000đ';
+document.querySelector('.cart-right table tr:nth-child(4) td:nth-child(2)').innerText = totalGoods.toLocaleString() + ',000đ';
+document.querySelector('.cart-right table tr:nth-child(5) td:nth-child(2)').innerText = totalGoods.toLocaleString() + ',000đ';
+
+// Thay thế kết quả vào trang
+
+</script>
