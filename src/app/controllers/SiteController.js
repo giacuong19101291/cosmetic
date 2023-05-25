@@ -83,7 +83,6 @@ class SiteController {
     .catch(err => res.status(500).send(err.message));
     }
         
-
     // [GET] /signup
     signup(req, res){
         res.render('signup')
