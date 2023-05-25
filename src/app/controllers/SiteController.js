@@ -68,7 +68,6 @@ class SiteController {
       if (!user) {
         // Người dùng không tồn tại
         return res.send('<script>alert("Invalid email"); window.location="/login";</script>')
-        
       }
       
       // So sánh mật khẩu

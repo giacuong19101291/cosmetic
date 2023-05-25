@@ -37,6 +37,7 @@ app.set('views', path.join(__dirname, 'resources/views'))
 // route init
 route(app);
 
-app.listen(port, () => {
-  console.log(`app listening on port ${port}`)
-})
+app.listen(port)
+// app.listen(port, () => {
+//   console.log(`app listening on port ${port}`)
+// })
